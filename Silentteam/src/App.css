@@ -1,0 +1,139 @@
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gps-status {
+  position: absolute;
+  bottom: 70px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.bottom-buttons-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.bottom-buttons-container button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: rgba(25, 64, 90, 0.5);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 20px;
+  overflow-y: auto;
+  pointer-events: all;
+}
+
+.left-menu {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.right-menu {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menu .exit {
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  background-image: url('src/music/quit.png');
+  background-repeat: no-repeat; 
+  background-position: center;
+  width: 40px;  /* Increased size */
+  height: 40px; /* Increased size */
+  border: none;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.bottom-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1002;
+  height: 70%;
+  background-color: rgba(25, 64, 90, 0.5);
+}
+
+.bottom-page button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.bottom-page .exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;  /* Increased size */
+  height: 40px; /* Increased size */
+  background-image: url('src/music/quit.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.position-button { 
+  background-image: url('src/music/plant.png');
+}
+
+.stats-button { 
+  background-image: url('src/music/water.png');
+  background-size: 50px; 
+}
+
+.songs-button { 
+  background-image: url('src/music/music.png');
+}
+
+.route-button { 
+  background-image: url('src/music/water.png');
+}
